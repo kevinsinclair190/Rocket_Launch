@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class CollisionHandler : MonoBehaviour
 {
@@ -12,14 +13,29 @@ public class CollisionHandler : MonoBehaviour
     AudioSource audioSource;
 
     bool isControllable = true;
+    bool isCollidable = true;
     
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
     }
+
+    private void Update()
+    {
+        RespondToDebugKeys();
+    }
+
+    void RespondToDebugKeys()
+    {
+        if (Keyboard.current.lKey.wasPressedThisFrame)
+        {
+            LoadNextLevel();
+        }
+        
+    }
     private void OnCollisionEnter(Collision other)
     {
-       if (!isControllable) { return; }
+       if (!isControllable || !isCollidable) { return; }
        
        switch (other.gameObject.tag)
         {

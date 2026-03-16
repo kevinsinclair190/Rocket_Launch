@@ -136,8 +136,8 @@ MonoBehaviour:
       m_Action: Rotation
       m_Flags: 8
     m_Flags: 0
-  thrustStrength: 2600
-  rotationStrength: 95
+  thrustStrength: 3000
+  rotationStrength: 190
   mainEngineSFX: {fileID: 8300000, guid: 8538a6f5c3a274646a73f589da468a28, type: 3}
   mainEngineParticles: {fileID: 5340055366365133207}
   rightThrustParticles: {fileID: 6607009326149202126}
@@ -166,10 +166,10 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2617493851426188894}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Mass: 1
-  m_Drag: 1.21
-  m_AngularDrag: 0.05
+  m_LinearDamping: 1.21
+  m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
